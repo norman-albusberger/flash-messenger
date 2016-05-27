@@ -8,7 +8,7 @@ npm install flash-messenger --save
 After installation you need to create a template partial which is able to itterate over the template variable flashMessenger. 
 The following code is written for [Handlebars](http://handlebarsjs.com/). If you are using handlebars simply copy the code and paste it into your layout.hbs file. If you are using another template engine you need to translate the code into the syntax of your template engine.
 
-
+```html
 {{#each flashMessenger.alerts}}
     <div class="alert alert-{{this.type}} {{#if this.isDismissible}}alert-dismissible{{/if}}">
         {\#if this.isDismissible}}
@@ -29,6 +29,7 @@ The following code is written for [Handlebars](http://handlebarsjs.com/). If you
         {{/if}}
     </div>
 {{/each}}
+```
 
 ##Template Vars
 1. array flashmessenger.alerts (Array of alert objects)
