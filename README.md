@@ -48,7 +48,7 @@ The following code is written for [Handlebars](http://handlebarsjs.com/). If you
 # Usage
 After initialization the property flashMessenger is accessable from the respone object:
  ```javascript
-    app.get('/, req,res){
+    app.get('/', req,res){
           //This creates an Bootstrap error alert     
           res.flashMessenger.error('Something went wrong.');
           res.render('path/to/your/template');
@@ -59,7 +59,7 @@ After initialization the property flashMessenger is accessable from the respone 
 ## More Actions
  
  ```javascript
-    app.get('/, req,res){
+    app.get('/', req,res){
           //This creates an Bootstrap success alert with the title: 'Yeah, you did it.'  
           var alert = res.flashMessenger.success('Yeah, you did it.');
           //Make the alert box dismissable
