@@ -1,0 +1,25 @@
+{
+  "name": "flash-messenger",
+  "version": "1.0.0",
+  "description": "A qualified flash messenger for nodejs to display error, success, info and default massages the bootstrap way.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wasabiNorman/flash-messenger.git"
+  },
+  "keywords": [
+    "bootstrap",
+    "flash",
+    "messenger",
+    "alerts"
+  ],
+  "author": "Norman Albusberger",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wasabiNorman/flash-messenger/issues"
+  },
+  "homepage": "https://github.com/wasabiNorman/flash-messenger#readme"
+}
