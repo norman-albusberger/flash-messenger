@@ -11,7 +11,7 @@ The following code is written for [Handlebars](http://handlebarsjs.com/). If you
 
 {{#each flashMessenger.alerts}}
     <div class="alert alert-{{this.type}} {{#if this.isDismissible}}alert-dismissible{{/if}}">
-        {{#if this.isDismissible}}
+        {\#if this.isDismissible}}
             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
         {{/if}}
         <h4>
