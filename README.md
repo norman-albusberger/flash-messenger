@@ -10,10 +10,10 @@ A qualified flash-messenger for Express and Twitter Bootstrap alerts.
 3. flashMessenger can be accessed from every response object
 
 
-#Install 
+# Install 
 npm install flash-messenger --save
 
-##Setup
+# Setup
 After installation you need to create a template partial which is able to itterate over the template variable flashMessenger. 
 The following code is written for [Handlebars](http://handlebarsjs.com/). If you are using handlebars simply copy the code and paste it into your layout.hbs file. If you are using another template engine you need to translate the code into the syntax of your template engine.
 
@@ -40,12 +40,12 @@ The following code is written for [Handlebars](http://handlebarsjs.com/). If you
 {{/each}}
 ```
 
-##Initialization
+# Initialization
   ```javascript
     var FlashMessenger = require('flash-messenger');
     app.use(FlashMessenger.middleware);
   ```
-##Usage
+# Usage
 After initialization the property flashMessenger is accessable from the respone object:
  ```javascript
     app.get('/, req,res){
@@ -56,7 +56,7 @@ After initialization the property flashMessenger is accessable from the respone 
     }
  ```
  
- ### More Actions
+## More Actions
  
  ```javascript
     app.get('/, req,res){
@@ -78,7 +78,7 @@ After initialization the property flashMessenger is accessable from the respone 
     }
  ```
  
- ##Template Vars
+# Template Vars
 
 The following template vars can be used to customize the view if neccessary.
 
