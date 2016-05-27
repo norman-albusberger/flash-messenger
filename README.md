@@ -44,5 +44,40 @@ The following code is written for [Handlebars](http://handlebarsjs.com/). If you
     app.use(FlashMessenger.middleware);
   ```
 ##Usage
+After initialization the property flashMessenger is accessable from the respone object:
+ ```javascript
+    app.get('/, req,res){
+          //This creates an Bootstrap error alert     
+          res.flashMessenger.error('Something went wrong.');
+          res.render('path/to/your/template');
+          //that's it. The rending works automatically 
+    }
+ ```
+ 
+ ### More Actions
+ 
+ ```javascript
+    app.get('/, req,res){
+          //This creates an Bootstrap success alert with the title: 'Yeah, you did it.'  
+          var alert = res.flashMessenger.success('Yeah, you did it.');
+          //Make the alert box dismissable
+          alert.isDismissible = true;
+          //set an font awesome icon
+          alert.titleIcon: 'fa fa-thumbs-o-up'
+          alert.addMessage('Now go to mainpage');
+          alert.addMessage('Wash yourself');
+          alert.addMessage('Go to bed');
+          
+          //This creates another Bootstrap alert with the type info and the title: 'Here comes another info'  
+          var anotherAlert = res.flashMessenger.info('Here comes another info');
+          
+          res.render('path/to/your/template');
+          //that's it. The rendering of the bootstrap alerts works automatically 
+    }
+ ```
+ 
+    
+
+
 
 
