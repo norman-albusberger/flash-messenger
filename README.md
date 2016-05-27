@@ -1,5 +1,14 @@
 # FlashMessenger
-A qualified flash-messenger for nodejs and bootstrap alerts.
+A qualified flash-messenger for Express and Twitter Bootstrap alerts.
+
+## Features
+1. You can create Twitter Bootstrap alerts from server
+2. Icon support
+3. Multi-Alert support
+4. Multi-Message support in one alert
+2. Auto-rendering: No need to create a template var for a partial or block
+3. flashMessenger can be accessed from every response object
+
 
 #Install 
 npm install flash-messenger --save
@@ -30,13 +39,6 @@ The following code is written for [Handlebars](http://handlebarsjs.com/). If you
     </div>
 {{/each}}
 ```
-
-##Template Vars
-1. array flashMessenger.alerts (Array of alert objects)
-2. string alert.type (danger, error, info, success)
-3. bool alert.dismissible 
-4. string alert.titleIcon (FontAwesome or glyphicon icon)
-5. array alert.messages (strings within the alert box for detail information)
 
 ##Initialization
   ```javascript
@@ -75,6 +77,16 @@ After initialization the property flashMessenger is accessable from the respone 
           //that's it. The rendering of the bootstrap alerts works automatically 
     }
  ```
+ 
+ ##Template Vars
+
+The following template vars can be used to customize the view if neccessary.
+
+1. array flashMessenger.alerts (Array of alert objects)
+2. string alert.type (danger, error, info, success)
+3. bool alert.dismissible 
+4. string alert.titleIcon (FontAwesome or glyphicon icon)
+5. array alert.messages (strings within the alert box for detail information)
  
     
 
