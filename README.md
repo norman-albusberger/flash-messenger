@@ -32,17 +32,17 @@ The following code is written for [Handlebars](http://handlebarsjs.com/). If you
 ```
 
 ##Template Vars
-1. array flashmessenger.alerts (Array of alert objects)
+1. array flashMessenger.alerts (Array of alert objects)
 2. string alert.type (danger, error, info, success)
 3. bool alert.dismissible 
 4. string alert.titleIcon (FontAwesome or glyphicon icon)
 5. array alert.messages (strings within the alert box for detail information)
 
 ##Initialization
-  
+  ```javascript
     var FlashMessenger = require('flash-messenger');
     app.use(FlashMessenger.middleware);
-
+  ```
 ##Usage
 
 
