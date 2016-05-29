@@ -1,6 +1,3 @@
-[![NPM Version][npm-image]][npm-url]
-  [![NPM Downloads][downloads-image]][downloads-url]
- 
 
 # FlashMessenger
 A qualified flash-messenger for Express and Twitter Bootstrap alerts.
