@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A qualified flash messenger for nodejs to display error, success, info and danger messages the bootstrap way.",
   "main": "index.js",
+  "readme": "README.md"
   "scripts": {
     "test": 
   },
