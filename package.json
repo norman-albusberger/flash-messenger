@@ -1,6 +1,6 @@
 {
   "name": "flash-messenger",
-  "version": „1.0.4“,
+  "version": "1.0.4",
   "description": "A qualified flash-messenger for Express and Twitter Bootstrap alerts.",
   "main": "index.js",
   "readme": "README.md",
