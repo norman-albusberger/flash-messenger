@@ -1,9 +1,10 @@
 {
   "name": "flash-messenger",
-  "version": "1.0.0",
-  "description": "A qualified flash messenger for nodejs to display error, success, info and danger messages the bootstrap way.",
+  "version": „1.0.4“,
+  "description": "A qualified flash-messenger for Express and Twitter Bootstrap alerts.",
   "main": "index.js",
   "readme": "README.md",
+  
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,7 +16,7 @@
     "bootstrap",
     "flash",
     "messenger",
-    "alerts",
+    "alerts"
   ],
   "author": "Norman Albusberger",
   "license": "ISC",
