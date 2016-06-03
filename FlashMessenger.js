@@ -68,7 +68,7 @@ class FlashMessenger {
 		this.add(alert);
 		return alert;
 	}
-
+	
 }
 
 module.exports = FlashMessenger;
