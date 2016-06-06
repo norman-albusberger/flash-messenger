@@ -3,13 +3,33 @@ var Alert = require('./Alert');
 
 class FlashMessenger {
 
-	constructor() {
-		this._alerts = [];
+	constructor(storage) {
+		this._storage = storage;
+		if (!this._storage.flashMessengerAlerts) {
+			this._storage.flashMessengerAlerts = [];
+		}
+		else {
+			var alerts = [];
+			this._storage.flashMessengerAlerts.forEach(item => {
+				let alert = new Alert(item._title, item._type);
+				alert.canBeDismissed = item.canBeDismissed;
+				alert.titleIcon = item.titleIcon;
+				alert._messages = item._messages;
+				alerts.push(alert);
+			});
+			this._storage.flashMessengerAlerts = alerts;
+		}
+
 	}
+
+	flushStorage() {
+		this._storage.flashMessengerAlerts = undefined;
+	}
+
 
 	add(alert) {
 		if (Alert.prototype.isPrototypeOf(alert)) {
-			this._alerts.push(alert);
+			this._storage.flashMessengerAlerts.push(alert);
 			return this;
 		}
 		else {
@@ -22,7 +42,13 @@ class FlashMessenger {
 	 * @returns {Array.<*>}
 	 */
 	get alerts() {
-		return this._alerts.slice();
+		return this._storage.flashMessengerAlerts;
+	}
+
+	get alertsBeforeFlush(){
+		let myAlerts = this.alerts;
+		this.flushStorage();
+		return myAlerts;
 	}
 
 	/**
@@ -68,7 +94,7 @@ class FlashMessenger {
 		this.add(alert);
 		return alert;
 	}
-	
+
 }
 
 module.exports = FlashMessenger;
