@@ -16,12 +16,12 @@ npm install flash-messenger --save
 
 # Setup
 After installation you need to create a template partial which is able to itterate over the template variable flashMessenger. 
-The following code is written for [Handlebars](http://handlebarsjs.com/). If you are using handlebars simply copy the code and paste it into your layout.hbs file. If you are using another template engine you need to translate the code into the syntax of your template engine.
+The following code is written for [Handlebars](http://handlebarsjs.com/). If you are using handlebars simply copy the code, create a partial and insert the partial and call it in your layout.hbs file. If you are using another template engine you need to translate the code into the syntax of your template engine.
 
 ```html
 {{#each flashMessenger.alerts}}
-    <div class="alert alert-{{this.type}} {{#if this.isDismissible}}alert-dismissible{{/if}}">
-        {#if this.isDismissible}}
+    <div class="alert alert-{{this.type}} {{#if this.canBeDismissed}}alert-dismissible{{/if}}">
+        {#if this.canBeDismissed}}
             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
         {{/if}}
         <h4>
@@ -53,7 +53,7 @@ After initialization the property flashMessenger is accessable from the respone 
           //This creates an Bootstrap error alert     
           res.flashMessenger.error('Something went wrong.');
           res.render('path/to/your/template');
-          //that's it. The rending works automatically 
+          //that's it. The rendering works automatically 
     }
  ```
  
