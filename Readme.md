@@ -90,13 +90,13 @@ After initialization the property flashMessenger is accessable from the respone 
 # Template Vars
 
 The following template vars can be used to customize the view if neccessary.
-
+```javascript
 1. array flashMessenger.alertsBeforeFlush (Array of alert objects, calling this alerts will be deleted from session)
 2. string alert.type (danger, error, info, success)
 3. bool alert.canBedismissed 
 4. string alert.titleIcon (FontAwesome or glyphicon icon)
 5. array alert.messages (strings within the alert box for detail information)
- 
+ ```
     
 
 
