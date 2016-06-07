@@ -16,8 +16,14 @@ A qualified flash-messenger for Express and Twitter Bootstrap alerts.
 npm install flash-messenger --save
 
 # Setup !IMPORTANT
-After installation you need to create a template partial which is able to iterate over the template variable flashMessenger.alertsBeforeFlush. 
+After installation you need to create a template partial which is able to iterate over the template variable 
+
+```javascript
+flashMessenger.alertsBeforeFlush
+```
+
 This will call a getter method of the FlashMessenger class which will return the stored alerts. Meanwhile the alerts stored in the session will be deleted. 
+
 The following code is written for [Handlebars](http://handlebarsjs.com/). If you are using handlebars simply copy the code, create a partial and insert the partial and call it in your layout.hbs file. If you are using another template engine you need to translate the code into the syntax of your template engine.
 
 ```html
