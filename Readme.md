@@ -7,19 +7,21 @@ A qualified flash-messenger for Express and Twitter Bootstrap alerts.
 2. Icon support
 3. Multi-Alert support
 4. Multi-Message support in one alert
-2. Auto-rendering: No need to create a template var for a partial or block
-3. flashMessenger can be accessed from every response object
+5. Supports multi redirects
+6. Auto-rendering: No need to create a template var for a partial or block
+7. FlashMessenger can be accessed from every response object
 
 
 # Install 
 npm install flash-messenger --save
 
-# Setup
-After installation you need to create a template partial which is able to itterate over the template variable flashMessenger. 
+# Setup !IMPORTANT
+After installation you need to create a template partial which is able to iterate over the template variable flashMessenger.alertsBeforeFlush. 
+This will call a getter method of the FlashMessenger class which will return the stored alerts. Meanwhile the alerts stored in the session will be deleted. 
 The following code is written for [Handlebars](http://handlebarsjs.com/). If you are using handlebars simply copy the code, create a partial and insert the partial and call it in your layout.hbs file. If you are using another template engine you need to translate the code into the syntax of your template engine.
 
 ```html
-{{#each flashMessenger.alerts}}
+{{#each flashMessenger.alertsBeforeFlush}}
     <div class="alert alert-{{this.type}} {{#if this.canBeDismissed}}alert-dismissible{{/if}}">
         {#if this.canBeDismissed}}
             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
