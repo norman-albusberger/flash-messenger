@@ -16,7 +16,11 @@
     "bootstrap",
     "flash",
     "messenger",
-    "alerts"
+    "alerts",
+    "alert",
+    "messages",
+    "express",
+    "callouts",
   ],
   "author": "Norman Albusberger",
   "license": "ISC",
