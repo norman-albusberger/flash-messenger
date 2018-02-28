@@ -7,23 +7,30 @@ A simple and lightweight flash-message module for Express and Twitter Bootstrap.
 2. Icon support
 3. Multi-Alert support
 4. Multi-Message support in one alert
-5. Supports multi redirects
+5. Supports multiple redirects
 6. Auto-rendering: No need to create a template var for a partial or block
-7. FlashMessenger can be accessed from every response object
+7. FlashMessenger can be accessed from response object
 
 
 # Install 
 npm install flash-messenger --save
 
+# Initialization
+  ```javascript
+    var FlashMessenger = require('flash-messenger');
+    app.use(FlashMessenger.middleware);
+  ```
+  
 # Setup !IMPORTANT
 After installation you need to create a template partial file. For handlebars template engine you can use the code below.
 If you want to write your own style make sure you are using the correct template vars. The most important is:
 ```javascript
 flashMessenger.alertsBeforeFlush
 ```
-This will call a getter method of the FlashMessenger class which will return the stored alerts. Meanwhile the alerts stored in the session will be deleted. 
+This will return the stored alerts. The alerts stored in the session will be deleted. 
 
-The following code is written for [Handlebars](http://handlebarsjs.com/). If you are using handlebars simply copy the code, create a partial and call it in your layout.hbs file. If you are using another template engine you need to translate the code into the syntax of your template engine.
+# Template 
+The following exampe is written in [Handlebars](http://handlebarsjs.com/). Simply copy the code, create a partial and call it in your layout.hbs file. If you are using another template engine you need to translate the code into the syntax of your template engine.
 
 ```html
 {{#each flashMessenger.alertsBeforeFlush}}
@@ -48,11 +55,6 @@ The following code is written for [Handlebars](http://handlebarsjs.com/). If you
 {{/each}}
 ```
 
-# Initialization
-  ```javascript
-    var FlashMessenger = require('flash-messenger');
-    app.use(FlashMessenger.middleware);
-  ```
 # Usage
 After initialization the property flashMessenger is accessable from the respone object:
  ```javascript
@@ -63,6 +65,7 @@ After initialization the property flashMessenger is accessable from the respone 
           //that's it. The rendering works automatically 
     }
  ```
+ Note: Typically flash message module only supports redirects. In this one you do not need to make a redirect to use it. You can simply render it directly. Redirects are also supported. 
  
 ## More Actions
  
