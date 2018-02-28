@@ -1,6 +1,6 @@
 
 # FlashMessenger
-A qualified flash-messenger for Express and Twitter Bootstrap alerts.
+A simple and lightweight flash-message module for Express and Twitter Bootstrap.
 
 ## Features
 1. You can create Twitter Bootstrap alerts from server
