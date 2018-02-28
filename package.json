@@ -1,12 +1,11 @@
 {
   "name": "flash-messenger",
   "version": "1.0.6",
-  "description": "A qualified flash-messenger for Express and Twitter Bootstrap alerts.",
+  "description": "A  flash-messenger for Express and Twitter Bootstrap alerts.",
   "main": "index.js",
   "readme": "Readme.md",
-  
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node_modules/.bin/mocha -w"
   },
   "repository": {
     "type": "git",
@@ -20,12 +19,16 @@
     "alert",
     "messages",
     "express",
-    "callouts",
+    "callouts"
   ],
   "author": "Norman Albusberger",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/wasabiNorman/flash-messenger/issues"
   },
-  "homepage": "https://github.com/wasabiNorman/flash-messenger#readme"
+  "homepage": "https://github.com/wasabiNorman/flash-messenger#readme",
+  "devDependencies": {
+    "assert": "^1.4.1",
+    "mocha": "^5.0.1"
+  }
 }
