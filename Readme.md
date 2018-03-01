@@ -35,7 +35,7 @@ The following exampe is written in [Handlebars](http://handlebarsjs.com/). Simpl
 ```html
 {{#each flashMessenger.alertsBeforeFlush}}
     <div class="alert alert-{{this.type}} {{#if this.canBeDismissed}}alert-dismissible{{/if}}">
-        {#if this.canBeDismissed}}
+        {{#if this.canBeDismissed}}
             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
         {{/if}}
         <h4>
